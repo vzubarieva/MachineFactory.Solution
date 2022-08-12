@@ -1,10 +1,16 @@
-namespace BestRestaurants.Models
+using System.Collections.Generic;
+
+namespace Factory.Models
 {
-    public class Cuisine
+    public class Machine
     {
-        public int CuisineId { get; set; }
+        public Machine()
+        {
+            this.JoinEntities = new HashSet<EngineerMachine>();
+        }
+
+        public int MachineId { get; set; }
         public string Type { get; set; }
-        public int RestaurantId { get; set; }
-        public virtual Restaurant Restaurant { get; set; }
+        public virtual ICollection<EngineerMachine> JoinEntities { get; }
     }
 }

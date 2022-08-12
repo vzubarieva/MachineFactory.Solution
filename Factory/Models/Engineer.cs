@@ -4,15 +4,15 @@ namespace Factory.Models
 {
     public class Engineer
     {
-        public Restaurant()
+        public Engineer()
         {
-            this.Cuisines = new HashSet<Cuisine>();
+            this.JoinEntities = new HashSet<EngineerMachine>();
         }
 
-        public int RestaurantId { get; set; }
+        public int EngineerId { get; set; }
         public string Name { get; set; }
+        public string Specialty { get; set; }
 
-        public int MichelinStars { get; set; }
-        public virtual ICollection<Cuisine> Cuisines { get; set; }
+        public virtual ICollection<EngineerMachine> JoinEntities { get; set; }
     }
 }
