@@ -18,8 +18,7 @@ namespace Factory.Controllers
 
         public ActionResult Index()
         {
-            List<Machine> model = _db.Machines.ToList();
-            return View(model);
+            return View(_db.Machines.ToList());
         }
 
         //         public ActionResult Create()
@@ -36,11 +35,14 @@ namespace Factory.Controllers
         //             return RedirectToAction("Index");
         //         }
 
-        //         public ActionResult Details(int id)
-        //         {
-        //             Cuisine thisCuisine = _db.Cuisines.FirstOrDefault(cuisine => cuisine.CuisineId == id);
-        //             return View(thisCuisine);
-        //         }
+        public ActionResult Details(int id)
+        {
+            var thisMachine = _db.Machines
+                .Include(machine => machine.JoinEntities)
+                .ThenInclude(join => join.Engineer)
+                .FirstOrDefault(machine => machine.MachineId == id);
+            return View(thisMachine);
+        }
 
         //         public ActionResult Edit(int id)
         //         {
