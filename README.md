@@ -1,8 +1,10 @@
-# Name of the project
+# Dr. Sillystringz's Factory
 
 #### By: Viktoriia Zubarieva
 
 ## Description
+
+This is web application which can help to keep track of machine repairs. This MVC web application is managing engineers, and the machines they are licensed to fix. The factory manager can add a list of engineers, a list of machines, and specify which engineers are licensed to repair which machines. There is a many-to-many relationship between Engineers and Machines. It shows that engineer can be licensed to repair (belong to) many machines (such as the Dreamweaver, the Bubblewrappinator, and the Laughbox) and a machine can have many engineers licensed to repair it.
 
 ## Technologies Used
 
@@ -14,17 +16,9 @@
 
 ## Setup/Installation Requirements
 
-- Clone this project to your desktop with the link provided on the its Github [repository](https://github.com/vzubarieva/Vendor-and--order-tracker.Solution)
+- Clone this project to your desktop with the link provided on the its Github [repository](https://github.com/vzubarieva/MachineFactory.Solution.Solution)
 - Navigate to the top level of the directory
-- Navigate to VAOT folder
-- Run the command `dotnet restore` in the terminal opened to the directory
-- Run `dotnet build` to build the site
-- Then run the command `dotnet watch run` to start the live server in the browser
-- Please follow the buttons and links to create new vendors and orders and view them.
-
-- If you want to test project, navigate to VAOT.Tests folder
-- Run the command `dotnet restore` in the terminal opened to the directory
-- Then run the command `dotnet test` to test the project in the console
+-
 
 ## Known Bugs
 
@@ -34,5 +28,5 @@
 
 _Message to viktoria.dubinina@gmail.com with any comments or contributions. This software is licensed under the MIT license_
 
-Copyright (c) _July 2022_ _Viktoriia Zubarieva_
+Copyright (c) _August 2022_ _Viktoriia Zubarieva_
 cd
