@@ -1,16 +1,21 @@
-@* @{
+@{
   Layout = "_Layout";
-  }
+}
 
-  @model BestRestaurants.Models.Restaurant
+@model Factory.Models.Engineer
 
-  <h4>Add a new restaurant</h4>
-  @using (Html.BeginForm())
-  {
+<h4>Add a new engineer</h4>
+
+@using (Html.BeginForm())
+{
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name)
-  @Html.LabelFor(model => model.MichelinStars)
-  @Html.TextBoxFor(model => model.MichelinStars)
-  <input type="submit" value="Add new restaurant" />
-  }
-  <p>@Html.ActionLink("Show all restaurants", "Index")</p> *@
+  @Html.LabelFor(model => model.Specialty)
+  @Html.TextBoxFor(model => model.Specialty)
+
+  @Html.Label("Select machine")
+  @Html.DropDownList("MachineId")
+
+  <input type="submit" value="Add new engineer" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all engineers", "Index")</p>

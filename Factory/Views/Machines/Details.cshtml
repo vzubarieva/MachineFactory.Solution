@@ -14,7 +14,7 @@
 }
 else
 {
-  <h4>Engineers the machine belongs to:</h4>
+  <h4>Engineer who are curruntly working on this machine</h4>
   <ul>
     @foreach (var join in Model.JoinEntities)
     {
@@ -26,4 +26,4 @@ else
 <p>@Html.ActionLink("Back to list", "Index")</p>
 <p>@Html.ActionLink("Edit machine", "Edit", new { id = Model.MachineId })</p>
 <p>@Html.ActionLink("Delete machine", "Delete", new { id = Model.MachineId })</p>
-<p>@Html.ActionLink("Add an engineer", "AddEngineer", new { id = Model.ModelId })</p>
+<p>@Html.ActionLink("Add an engineer", "AddEngineer", new { id = Model.MachineId })</p>
