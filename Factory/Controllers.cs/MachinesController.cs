@@ -92,19 +92,30 @@ namespace Factory.Controllers
             return RedirectToAction("Index");
         }
 
-        //         public ActionResult Delete(int id)
-        //         {
-        //             var thisCuisine = _db.Cuisines.FirstOrDefault(cuisine => cuisine.CuisineId == id);
-        //             return View(thisCuisine);
-        //         }
+        public ActionResult Delete(int id)
+        {
+            var thisMachine = _db.Machines.FirstOrDefault(machine => machine.MachineId == id);
+            return View(thisMachine);
+        }
 
-        //         [HttpPost, ActionName("Delete")]
-        //         public ActionResult DeleteConfirmed(int id)
-        //         {
-        //             var thisCuisine = _db.Cuisines.FirstOrDefault(cuisine => cuisine.CuisineId == id);
-        //             _db.Cuisines.Remove(thisCuisine);
-        //             _db.SaveChanges();
-        //             return RedirectToAction("Index");
-        //         }
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            var thisMachine = _db.Machines.FirstOrDefault(machine => machine.MachineId == id);
+            _db.Machines.Remove(thisMachine);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult DeleteEngineer(int joinId)
+        {
+            var joinEntry = _db.EngineerMachine.FirstOrDefault(
+                entry => entry.EngineerMachineId == joinId
+            );
+            _db.EngineerMachine.Remove(joinEntry);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
