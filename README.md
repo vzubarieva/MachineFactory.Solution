@@ -6,6 +6,8 @@
 
 This is web application which can help to keep track of machine repairs at Dr. Sillystringz's Factory. This MVC web application is managing engineers, and the machines they are licensed to fix. The factory manager can add a list of engineers, a list of machines, and specify which engineers are licensed to repair which machines. There is a many-to-many relationship between Engineers and Machines. It shows that engineer can be licensed to repair (belong to) many machines (such as the Dreamweaver, the Bubblewrappinator, and the Laughbox) and a machine can have many engineers licensed to repair it.
 
+![schema-machine-factory](Factory/wwwroot/img/schema.png)
+
 ## Technologies Used
 
 - C#
@@ -20,7 +22,6 @@ This is web application which can help to keep track of machine repairs at Dr. S
 
 - Clone this project to your desktop with the link provided on the its Github [repository](https://github.com/vzubarieva/MachineFactory.Solution.Solution)
 - Navigate to the top level of the directory
-- Open in text editor
 - Create appsettings.json in MachineFactory/Factory/ directory
 - Copy this code into appsettings.json, replacing YOUR_PASSWORD with your MySQL password
   {
