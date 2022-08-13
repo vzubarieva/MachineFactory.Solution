@@ -58,7 +58,7 @@ namespace Factory.Controllers
         public ActionResult Edit(int id)
         {
             var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
-            ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
+            ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Type");
             return View(thisEngineer);
         }
 
@@ -80,23 +80,30 @@ namespace Factory.Controllers
             return RedirectToAction("Index");
         }
 
-        // public ActionResult Delete(int id)
-        // {
-        //     var thisRestaurant = _db.Restaurants.FirstOrDefault(
-        //         restaurant => restaurant.RestaurantId == id
-        //     );
-        //     return View(thisRestaurant);
-        // }
+        public ActionResult Delete(int id)
+        {
+            var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+            return View(thisEngineer);
+        }
 
-        // [HttpPost, ActionName("Delete")]
-        // public ActionResult DeleteConfirmed(int id)
-        // {
-        //     var thisRestaurant = _db.Restaurants.FirstOrDefault(
-        //         restaurant => restaurant.RestaurantId == id
-        //     );
-        //     _db.Restaurants.Remove(thisRestaurant);
-        //     _db.SaveChanges();
-        //     return RedirectToAction("Index");
-        // }
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+            _db.Engineers.Remove(thisEngineer);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult DeleteMachine(int joinId)
+        {
+            var joinEntry = _db.EngineerMachine.FirstOrDefault(
+                entry => entry.EngineerMachineId == joinId
+            );
+            _db.EngineerMachine.Remove(joinEntry);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
