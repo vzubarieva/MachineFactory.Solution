@@ -27,8 +27,9 @@ else
     }
   </ul>
 }
-
-<p>@Html.ActionLink("Back to engineers", "Index")</p>
-<p>@Html.ActionLink("Edit engineer", "Edit", new { id = Model.EngineerId })</p>
-<p>@Html.ActionLink("Delete engineer", "Delete", new { id = Model.EngineerId })</p>
-<p>@Html.ActionLink("Add the machine", "AddMachine", new { id = Model.EngineerId })</p>
+<div class="hstack gap-3 pt-3 mt-3 border-top border-dark">
+  <p>@Html.ActionLink("Back to engineers", "Index")</p>
+  <p>@Html.ActionLink("Edit engineer", "Edit", new { id = Model.EngineerId })</p>
+  <p>@Html.ActionLink("Delete engineer", "Delete", new { id = Model.EngineerId })</p>
+  <p>@Html.ActionLink("Add the machine", "AddMachine", new { id = Model.EngineerId })</p>
+</div>

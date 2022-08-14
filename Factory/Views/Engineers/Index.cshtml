@@ -17,6 +17,8 @@
     <li>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId }) </li>
   }
 </ul>
-<p>@Html.ActionLink("Add new engineer", "Create")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
-<p>@Html.ActionLink("See all enginners", "Index", "Engineers")</p>
+<div class="hstack gap-3 pt-3 mt-3 border-top border-dark">
+  <p>@Html.ActionLink("Add new engineer", "Create")</p>
+  <p>@Html.ActionLink("Home", "Index", "Home")</p>
+  <p>@Html.ActionLink("See all enginners", "Index", "Engineers")</p>
+</div>

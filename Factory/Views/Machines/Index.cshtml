@@ -17,6 +17,9 @@
     <li>@Html.ActionLink($"{machine.Type}", "Details", new { id = machine.MachineId }) </li>
   }
 </ul>
-<p>@Html.ActionLink("Add new machine", "Create")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
-<p>@Html.ActionLink("See all machines", "Index", "Machines")</p>
+
+<div class="hstack gap-3 pt-3 mt-3 border-top border-dark">
+  <p>@Html.ActionLink("Add new machine", "Create")</p>
+  <p>@Html.ActionLink("Home", "Index", "Home")</p>
+  <p>@Html.ActionLink("See all machines", "Index", "Machines")</p>
+</div>

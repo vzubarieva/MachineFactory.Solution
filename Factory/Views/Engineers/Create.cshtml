@@ -16,6 +16,8 @@
   @Html.Label("Select machine")
   @Html.DropDownList("MachineId")
 
-  <input type="submit" value="Add new engineer" class="btn btn-default" />
+  <input type="submit" value="Add new engineer" />
 }
-<p>@Html.ActionLink("Show all engineers", "Index")</p>
+<div class="hstack gap-3 pt-3 mt-3 border-top border-dark">
+  <p>@Html.ActionLink("Show all engineers", "Index")</p>
+</div>
